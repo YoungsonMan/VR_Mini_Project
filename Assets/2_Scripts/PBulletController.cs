@@ -47,13 +47,14 @@ public class PBulletController : MonoBehaviour
         Destroy(gameObject, destroyTime);
     }
 
-  //  private void OnCollisionEnter(Collision collision)
-  //  {
-  //      if (collision.gameObject)
-  //      {
-  //          ObjectPoolingManager.ReturnObjectToPool(gameObject);
-  //      }
-  //  }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject)
+        {
+            Debug.Log(collision.gameObject.name);
+            ObjectPoolingManager.ReturnObjectToPool(gameObject);
+        }
+    }
 
 
 }

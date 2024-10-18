@@ -10,7 +10,7 @@ public class PistolController : MonoBehaviour
     [SerializeField] float bulletSpeed;
 
     [SerializeField] ParticleSystem vfxFire;
-
+    [SerializeField] ParticleSystem vfxShellOut;
     void Start()
     {
 
@@ -18,12 +18,11 @@ public class PistolController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if( Input.GetKeyDown(KeyCode.Space))
         {
             Fire();
         }
-
-
+        
     }
 
     public void Fire()
@@ -33,5 +32,6 @@ public class PistolController : MonoBehaviour
         rigid.AddForce(bullet.transform.forward * bulletSpeed ,  ForceMode.Impulse);
         // rigid.velocity = bullet.transform.forward * bulletSpeed * Time.deltaTime;
         vfxFire.Play();
+        vfxShellOut.Play();
     }
 }
