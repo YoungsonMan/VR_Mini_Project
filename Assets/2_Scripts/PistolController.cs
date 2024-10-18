@@ -9,7 +9,7 @@ public class PistolController : MonoBehaviour
     [SerializeField] Transform muzzlePoint;
     [SerializeField] float bulletSpeed;
 
-
+    [SerializeField] ParticleSystem vfxFire;
 
     void Start()
     {
@@ -32,5 +32,6 @@ public class PistolController : MonoBehaviour
         Rigidbody rigid = bullet.GetComponent<Rigidbody>();
         rigid.AddForce(bullet.transform.forward * bulletSpeed ,  ForceMode.Impulse);
         // rigid.velocity = bullet.transform.forward * bulletSpeed * Time.deltaTime;
+        vfxFire.Play();
     }
 }

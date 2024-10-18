@@ -9,7 +9,10 @@ public class PBulletController : MonoBehaviour
     [SerializeField] float destroyTime = 3f;
 
     private Coroutine returnToPoolTimer;
+    public int damage;
 
+
+    
 
 
     private void Awake()
