@@ -1790,6 +1790,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4834257298755560, guid: f8a48f8be2524674799f72b2d14af8e9, type: 3}
   m_PrefabInstance: {fileID: 128148675}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &151662369 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8658859899354233124, guid: 0c2d8c150f7ea164d909bcc3f7d95aa6, type: 3}
+  m_PrefabInstance: {fileID: 2571325177488077580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &160252938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6693,11 +6698,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4711308571122950, guid: 374fd195de6c7734c8abe31949209f6f, type: 3}
   m_PrefabInstance: {fileID: 791837038}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &796619655 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2571325177808453771, guid: 0c2d8c150f7ea164d909bcc3f7d95aa6, type: 3}
-  m_PrefabInstance: {fileID: 2571325177488077580}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &800384844
 PrefabInstance:
@@ -13477,7 +13477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -16985,6 +16985,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4964975764543134, guid: 257d879b58446a74fad6c39dbdf7e9cc, type: 3}
   m_PrefabInstance: {fileID: 1978709593}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1990819762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990819763}
+  - component: {fileID: 1990819764}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1990819763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990819762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3614397, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990819764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990819762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd30bb954d0d3204fb236298e46b794b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 0}
+  sfxPistolFire: {fileID: 151662369}
+  sfxPistolShellDrop: {fileID: 0}
 --- !u!1001 &1999563485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18398,10 +18445,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
-    - target: {fileID: 8062948436832809773, guid: 0c2d8c150f7ea164d909bcc3f7d95aa6, type: 3}
-      propertyPath: vfxShellOut
-      value: 
-      objectReference: {fileID: 796619655}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2d8c150f7ea164d909bcc3f7d95aa6, type: 3}
 --- !u!1001 &6835749021515366486
