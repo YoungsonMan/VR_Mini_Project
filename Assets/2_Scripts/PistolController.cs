@@ -10,10 +10,14 @@ public class PistolController : MonoBehaviour
     [SerializeField] Transform muzzlePoint;
     [SerializeField] float bulletSpeed;
 
+    [Header("SFX Effects")]
     [SerializeField] ParticleSystem vfxFire;
     [SerializeField] ParticleSystem vfxShellOut;
 
+    [Header("SFX Sounds")]
     [SerializeField] AudioClip fireSound;
+    [SerializeField] AudioClip clickSound;
+
 
     void Start()
     {
@@ -36,9 +40,17 @@ public class PistolController : MonoBehaviour
         Rigidbody rigid = bullet.GetComponent<Rigidbody>();
         rigid.AddForce(bullet.transform.forward * bulletSpeed ,  ForceMode.Impulse);
         // rigid.velocity = bullet.transform.forward * bulletSpeed * Time.deltaTime;
+        
+        // 총기 이펙트효과 시작
         vfxFire.Play();
         vfxShellOut.Play();
+        
+        // 총기발사 효과음
         SoundManager.Instance.PlaySFXPistolFire(fireSound);
+    }
+    public void ClickSound()
+    {
+        SoundManager.Instance.PlaySFXPistolClick(clickSound);
     }
  
 }

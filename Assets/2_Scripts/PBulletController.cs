@@ -12,8 +12,8 @@ public class PBulletController : MonoBehaviour
     public int damage;
 
 
-    
 
+    Enemy enemy;
 
     private void Awake()
     {
@@ -53,6 +53,12 @@ public class PBulletController : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
             ObjectPoolingManager.ReturnObjectToPool(gameObject);
+            enemy = collision.collider.gameObject.GetComponent<Enemy>();
+            if (enemy != null && enemy.enemyCurrentHP > 0)
+            {
+                enemy.TakeHit(damage);
+                //Debug.Log($"enemyHP : {enemy.enemyCurrentHP}");
+            }
         }
     }
 

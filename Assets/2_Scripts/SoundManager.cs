@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] AudioSource bgm;
     [SerializeField] AudioSource sfxPistolFire;
-    [SerializeField] AudioSource sfxPistolShellDrop;
+    [SerializeField] AudioSource sfxPistolClick;
 
 
     private void Awake()
@@ -50,6 +50,10 @@ public class SoundManager : MonoBehaviour
     public void PlaySFXPistolFire(AudioClip clip)
     {
         sfxPistolFire.PlayOneShot(clip);
+    }
+    public void PlaySFXPistolClick(AudioClip clip)
+    {
+        sfxPistolClick.PlayOneShot(clip);
     }
 
 }
