@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
         Debug.Log($"{gameObject.name} HP : {enemyCurrentHP}.");
         if (enemyCurrentHP <= 0)
         {
-            animator.SetTrigger("Dead");
+            // animator.SetTrigger("Dead");
             
             StartCoroutine(Die());
             return;
