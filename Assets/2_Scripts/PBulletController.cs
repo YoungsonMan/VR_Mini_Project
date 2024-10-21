@@ -53,6 +53,8 @@ public class PBulletController : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
             ObjectPoolingManager.ReturnObjectToPool(gameObject);
+            Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
             enemy = collision.collider.gameObject.GetComponent<Enemy>();
             if (enemy != null && enemy.enemyCurrentHP > 0)
             {
@@ -60,6 +62,7 @@ public class PBulletController : MonoBehaviour
                 //Debug.Log($"enemyHP : {enemy.enemyCurrentHP}");
             }
         }
+        
     }
 
 

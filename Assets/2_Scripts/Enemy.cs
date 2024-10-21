@@ -89,6 +89,13 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(3f);
         // Destroy(gameObject);
         ObjectPoolingManager.ReturnObjectToPool(gameObject);
+        Reset();
+    }
+    public void Reset()
+    {
+        enemyCollider.enabled = true;
+        InitEnemyHP();
+        agent.speed = 1;
     }
 
 

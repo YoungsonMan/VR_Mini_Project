@@ -47,8 +47,9 @@ public class ObjectPoolingManager : MonoBehaviour
         {
             obj.SetActive(false);
             pool.InativeObjects.Add(obj);
-            Rigidbody rb = obj.GetComponent<Rigidbody>();
-            rb.velocity = Vector3.zero;
+            // 총알 백터 재설정하는건데 지금 몹도 같이 적용됨 
+         //   Rigidbody rb = obj.GetComponent<Rigidbody>();
+         //   rb.velocity = Vector3.zero;
         }
         else
         {
