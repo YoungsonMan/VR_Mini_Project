@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01e71c2870e3f34d9ca6f3a975e14f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHP: 100
+  enemyMaxHP: 50
   enemyCurrentHP: 0
   HpBar: {fileID: 2376344653835224162}
   agent: {fileID: 0}
